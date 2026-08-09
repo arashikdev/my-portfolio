@@ -701,7 +701,7 @@ const Hero = () => {
                   "
                 >
                   <Image
-                    src="/images/ashik3.png"
+                    src="/images/ashik.png"
                     alt="Jahid Hasan - Junior Web Developer"
                     width={566}
                     height={600}
@@ -836,123 +836,7 @@ const Hero = () => {
 
         {/* ================= STATS ================= */}
 
-        <div className="relative z-20 mx-auto max-w-4xl pb-10">
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.8,
-              delay: 1,
-            }}
-            className="
-              grid
-              grid-cols-3
-              overflow-hidden
-              rounded-2xl
-              border
-              border-white/[0.08]
-              bg-white/[0.025]
-              backdrop-blur-xl
-            "
-          >
-
-            <div
-              className="
-                flex
-                flex-col
-                items-center
-                justify-center
-                border-r
-                border-white/[0.08]
-                py-5
-              "
-            >
-              <strong className="text-2xl font-black md:text-3xl">
-                10+
-              </strong>
-
-              <span
-                className="
-                  mt-1
-                  text-[8px]
-                  font-bold
-                  tracking-[0.15em]
-                  text-slate-500
-                  md:text-[10px]
-                "
-              >
-                PROJECTS
-              </span>
-            </div>
-
-
-            <div
-              className="
-                flex
-                flex-col
-                items-center
-                justify-center
-                border-r
-                border-white/[0.08]
-                py-5
-              "
-            >
-              <strong className="text-2xl font-black md:text-3xl">
-                6+
-              </strong>
-
-              <span
-                className="
-                  mt-1
-                  text-[8px]
-                  font-bold
-                  tracking-[0.15em]
-                  text-slate-500
-                  md:text-[10px]
-                "
-              >
-                TECH STACK
-              </span>
-            </div>
-
-
-            <div
-              className="
-                flex
-                flex-col
-                items-center
-                justify-center
-                py-5
-              "
-            >
-              <strong className="text-2xl font-black md:text-3xl">
-                ∞
-              </strong>
-
-              <span
-                className="
-                  mt-1
-                  text-[8px]
-                  font-bold
-                  tracking-[0.15em]
-                  text-slate-500
-                  md:text-[10px]
-                "
-              >
-                LEARNING
-              </span>
-            </div>
-
-          </motion.div>
-
-        </div>
+       
 
       </div>
 

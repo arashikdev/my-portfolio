@@ -200,6 +200,7 @@ const Projects = ({ projectsData = [] }) => {
     if (!projectsData?.length) return;
 
     const ctx = gsap.context(() => {
+      // Header animation
       gsap.from(".projects-header", {
         opacity: 0,
         y: 35,
@@ -211,6 +212,7 @@ const Projects = ({ projectsData = [] }) => {
         },
       });
 
+      // Card animation
       gsap.utils.toArray(".project-card").forEach((card, index) => {
         gsap.fromTo(
           card,
@@ -241,15 +243,28 @@ const Projects = ({ projectsData = [] }) => {
     <section
       ref={sectionRef}
       id="projects"
-      className="relative overflow-hidden bg-[#050816] px-6 py-24"
+      className="relative overflow-hidden py-24 md:py-32"
     >
-      {/* Ambient Glow */}
-      <div className="pointer-events-none absolute left-1/4 top-20 h-72 w-72 rounded-full bg-violet-500/10 blur-[120px]" />
-      <div className="pointer-events-none absolute right-1/4 top-1/2 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
+      {/* ================================================= */}
+      {/* AMBIENT BACKGROUND */}
+      {/* ================================================= */}
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="pointer-events-none absolute -left-40 top-40 h-96 w-96 rounded-full bg-violet-500/10 blur-[140px]" />
 
-        {/* ================= HEADER ================= */}
+      <div className="pointer-events-none absolute -right-40 top-[45%] h-96 w-96 rounded-full bg-blue-500/10 blur-[150px]" />
+
+      <div className="pointer-events-none absolute left-1/2 top-[20%] h-72 w-72 -translate-x-1/2 rounded-full bg-violet-500/5 blur-[120px]" />
+
+      {/* ================================================= */}
+      {/* MAIN CONTAINER */}
+      {/* ================================================= */}
+
+      <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-8">
+
+        {/* ================================================= */}
+        {/* HEADER */}
+        {/* ================================================= */}
+
         <div className="projects-header mb-16">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-10 bg-gradient-to-br from-violet-500 to-blue-500" />
@@ -268,7 +283,7 @@ const Projects = ({ projectsData = [] }) => {
                 </span>
               </h2>
 
-              <div className="mt-4 h-1 w-20 rounded-full bg-gradient-to-br from-violet-500 to-blue-500" />
+              <div className="mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-violet-500 to-blue-500" />
             </div>
 
             <p className="max-w-lg text-sm leading-7 text-slate-500">
@@ -278,17 +293,34 @@ const Projects = ({ projectsData = [] }) => {
           </div>
         </div>
 
-        {/* ================= PROJECT LIST ================= */}
+        {/* ================================================= */}
+        {/* PROJECT LIST */}
+        {/* ================================================= */}
+
         <div className="space-y-8">
           {projectsData?.length > 0 ? (
             projectsData.map((project, index) => (
               <motion.article
                 key={`${project.id}-${index}`}
-                whileHover={{ y: -4 }}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.15,
+                }}
                 transition={{
-                  type: "spring",
-                  stiffness: 250,
-                  damping: 22,
+                  duration: 0.7,
+                  delay: index * 0.08,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  y: -8,
                 }}
                 className="
                   project-card
@@ -302,11 +334,15 @@ const Projects = ({ projectsData = [] }) => {
                   backdrop-blur-xl
                   transition-all
                   duration-500
-                  hover:border-violet-500/30
-                  hover:shadow-[0_25px_80px_rgba(0,0,0,0.35)]
+                  hover:border-violet-500/40
+                  hover:shadow-[0_25px_80px_rgba(99,102,241,0.15)]
                 "
               >
-                {/* Hover Glow */}
+
+                {/* ================================================= */}
+                {/* CARD HOVER GLOW */}
+                {/* ================================================= */}
+
                 <div
                   className="
                     pointer-events-none
@@ -317,26 +353,59 @@ const Projects = ({ projectsData = [] }) => {
                     w-72
                     rounded-full
                     bg-gradient-to-br
-                    from-violet-500/15
-                    to-blue-500/10
+                    from-violet-500/20
+                    to-blue-500/15
                     opacity-0
                     blur-[90px]
-                    transition-opacity
-                    duration-500
+                    transition-all
+                    duration-700
                     group-hover:opacity-100
                   "
                 />
 
-                {/* ================= CARD ================= */}
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    -bottom-32
+                    -left-32
+                    h-64
+                    w-64
+                    rounded-full
+                    bg-blue-500/10
+                    opacity-0
+                    blur-[90px]
+                    transition-opacity
+                    duration-700
+                    group-hover:opacity-100
+                  "
+                />
+
+                {/* ================================================= */}
+                {/* CARD */}
+                {/* ================================================= */}
+
                 <div className="relative grid lg:grid-cols-[1.05fr_1fr]">
 
+                  {/* ================================================= */}
                   {/* IMAGE */}
+                  {/* ================================================= */}
+
                   <div className="relative min-h-[280px] overflow-hidden lg:min-h-[360px]">
+
                     <motion.img
                       src={project.image}
                       alt={project.title}
-                      whileHover={{ scale: 1.06 }}
-                      transition={{ duration: 0.7 }}
+                      initial={{
+                        scale: 1,
+                      }}
+                      whileHover={{
+                        scale: 1.08,
+                      }}
+                      transition={{
+                        duration: 0.8,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
                       className="
                         absolute
                         inset-0
@@ -344,15 +413,48 @@ const Projects = ({ projectsData = [] }) => {
                         w-full
                         object-cover
                         transition-all
-                        duration-500
-                        group-hover:brightness-90
+                        duration-700
+                        group-hover:brightness-75
                       "
                     />
 
-                    {/* Image Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#07111e]/10 via-transparent to-[#07111e]/90" />
+                    {/* Image Dark Overlay */}
 
-                    {/* Number */}
+                    <div
+                      className="
+                        absolute
+                        inset-0
+                        bg-gradient-to-r
+                        from-[#07111e]/10
+                        via-transparent
+                        to-[#07111e]/90
+                      "
+                    />
+
+                    {/* Violet Blue Hover Overlay */}
+
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute
+                        inset-0
+                        bg-gradient-to-br
+                        from-violet-500/0
+                        via-transparent
+                        to-blue-500/0
+                        opacity-0
+                        transition-all
+                        duration-700
+                        group-hover:from-violet-500/20
+                        group-hover:to-blue-500/20
+                        group-hover:opacity-100
+                      "
+                    />
+
+                    {/* ================================================= */}
+                    {/* NUMBER */}
+                    {/* ================================================= */}
+
                     <div
                       className="
                         absolute
@@ -372,12 +474,21 @@ const Projects = ({ projectsData = [] }) => {
                         font-black
                         text-violet-400
                         backdrop-blur-xl
+                        transition-all
+                        duration-500
+                        group-hover:scale-110
+                        group-hover:border-violet-400/60
+                        group-hover:bg-violet-500/10
+                        group-hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]
                       "
                     >
                       {String(index + 1).padStart(2, "0")}
                     </div>
 
-                    {/* Year */}
+                    {/* ================================================= */}
+                    {/* YEAR */}
+                    {/* ================================================= */}
+
                     <span
                       className="
                         absolute
@@ -396,28 +507,40 @@ const Projects = ({ projectsData = [] }) => {
                         tracking-widest
                         text-slate-300
                         backdrop-blur-md
+                        transition-all
+                        duration-300
+                        group-hover:border-violet-400/30
+                        group-hover:bg-violet-500/10
                       "
                     >
                       {project.year}
                     </span>
                   </div>
 
+                  {/* ================================================= */}
                   {/* CONTENT */}
+                  {/* ================================================= */}
+
                   <div className="relative flex flex-col justify-between p-7 md:p-9 lg:p-10">
+
                     <div>
 
                       {/* Category */}
+
                       <div className="mb-5 flex items-center justify-between">
                         <span className="bg-gradient-to-br from-violet-500 to-blue-500 bg-clip-text font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-transparent">
                           {project.role}
                         </span>
 
-                        <span className="text-xs text-slate-600">
+                        <span className="text-xs text-slate-600 transition-colors duration-300 group-hover:text-violet-400/70">
                           / {String(index + 1).padStart(2, "0")}
                         </span>
                       </div>
 
-                      {/* Title */}
+                      {/* ================================================= */}
+                      {/* TITLE */}
+                      {/* ================================================= */}
+
                       <Link href={`/projects/${project.id}`}>
                         <h3
                           className="
@@ -426,8 +549,9 @@ const Projects = ({ projectsData = [] }) => {
                             tracking-tight
                             text-white
                             transition-all
-                            duration-300
-                            group-hover:bg-gradient-to-br
+                            duration-500
+                            group-hover:translate-x-1
+                            group-hover:bg-gradient-to-r
                             group-hover:from-violet-400
                             group-hover:to-blue-400
                             group-hover:bg-clip-text
@@ -439,16 +563,31 @@ const Projects = ({ projectsData = [] }) => {
                         </h3>
                       </Link>
 
-                      {/* Description */}
-                      <p className="mt-4 max-w-xl text-sm leading-7 text-slate-500">
+                      {/* ================================================= */}
+                      {/* DESCRIPTION */}
+                      {/* ================================================= */}
+
+                      <p className="mt-4 max-w-xl text-sm leading-7 text-slate-500 transition-colors duration-300 group-hover:text-slate-400">
                         {project.description}
                       </p>
 
-                      {/* Tags */}
+                      {/* ================================================= */}
+                      {/* TAGS */}
+                      {/* ================================================= */}
+
                       <div className="mt-6 flex flex-wrap gap-2">
                         {project.tags?.map((tag, tagIndex) => (
-                          <span
+                          <motion.span
                             key={tagIndex}
+                            whileHover={{
+                              y: -4,
+                              scale: 1.05,
+                            }}
+                            transition={{
+                              type: "spring",
+                              stiffness: 300,
+                              damping: 15,
+                            }}
                             className="
                               rounded-lg
                               border
@@ -466,30 +605,39 @@ const Projects = ({ projectsData = [] }) => {
                               text-violet-300
                               transition-all
                               duration-300
-                              hover:border-violet-400/40
-                              hover:from-violet-500/[0.15]
-                              hover:to-blue-500/[0.10]
+                              hover:border-violet-400/50
+                              hover:from-violet-500/20
+                              hover:to-blue-500/10
+                              hover:shadow-[0_8px_25px_rgba(139,92,246,0.12)]
                             "
                           >
                             {tag}
-                          </span>
+                          </motion.span>
                         ))}
                       </div>
                     </div>
 
-                    {/* Bottom Actions */}
+                    {/* ================================================= */}
+                    {/* BOTTOM ACTIONS */}
+                    {/* ================================================= */}
+
                     <div className="mt-9 flex flex-col gap-3 sm:flex-row">
 
-                      {/* Case Study */}
+                      {/* ================================================= */}
+                      {/* CASE STUDY */}
+                      {/* ================================================= */}
+
                       <Link
                         href={`/projects/${project.id}`}
                         className="
                           group/button
+                          relative
                           flex
                           flex-1
                           items-center
                           justify-center
                           gap-2
+                          overflow-hidden
                           rounded-xl
                           bg-gradient-to-br
                           from-violet-500
@@ -503,15 +651,45 @@ const Projects = ({ projectsData = [] }) => {
                           text-white
                           transition-all
                           duration-300
+                          hover:-translate-y-1
                           hover:from-violet-400
                           hover:to-blue-400
-                          hover:shadow-[0_10px_30px_rgba(139,92,246,0.25)]
+                          hover:shadow-[0_15px_35px_rgba(139,92,246,0.25)]
+                          active:scale-95
                         "
                       >
-                        View Case Study
+
+                        {/* Shine */}
+
+                        <span
+                          className="
+                            absolute
+                            inset-y-0
+                            -left-20
+                            w-12
+                            rotate-12
+                            bg-white/20
+                            blur-md
+                            transition-all
+                            duration-700
+                            group-hover/button:left-[120%]
+                          "
+                        />
+
+                        <span className="relative z-10">
+                          View Case Study
+                        </span>
 
                         <svg
-                          className="h-3.5 w-3.5 transition-transform group-hover/button:translate-x-1"
+                          className="
+                            relative
+                            z-10
+                            h-3.5
+                            w-3.5
+                            transition-transform
+                            duration-300
+                            group-hover/button:translate-x-1
+                          "
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -525,7 +703,10 @@ const Projects = ({ projectsData = [] }) => {
                         </svg>
                       </Link>
 
-                      {/* Live */}
+                      {/* ================================================= */}
+                      {/* LIVE PREVIEW */}
+                      {/* ================================================= */}
+
                       <a
                         href={project.link}
                         target="_blank"
@@ -549,15 +730,26 @@ const Projects = ({ projectsData = [] }) => {
                           text-slate-400
                           transition-all
                           duration-300
-                          hover:border-violet-500/30
-                          hover:bg-violet-500/[0.06]
+                          hover:-translate-y-1
+                          hover:border-violet-500/40
+                          hover:bg-gradient-to-br
+                          hover:from-violet-500/10
+                          hover:to-blue-500/10
                           hover:text-violet-300
+                          hover:shadow-[0_12px_30px_rgba(99,102,241,0.12)]
+                          active:scale-95
                         "
                       >
                         Live Preview
 
                         <svg
-                          className="h-3.5 w-3.5"
+                          className="
+                            h-3.5
+                            w-3.5
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1
+                          "
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -572,13 +764,34 @@ const Projects = ({ projectsData = [] }) => {
                       </a>
                     </div>
 
-                    {/* Bottom Accent */}
-                    <div className="mt-8 h-px w-full bg-gradient-to-r from-violet-500/40 via-blue-500/20 to-transparent" />
+                    {/* ================================================= */}
+                    {/* BOTTOM ACCENT */}
+                    {/* ================================================= */}
+
+                    <div
+                      className="
+                        mt-8
+                        h-px
+                        w-full
+                        bg-gradient-to-r
+                        from-violet-500/40
+                        via-blue-500/20
+                        to-transparent
+                        transition-all
+                        duration-500
+                        group-hover:from-violet-500/80
+                        group-hover:via-blue-500/50
+                      "
+                    />
                   </div>
                 </div>
               </motion.article>
             ))
           ) : (
+            /* ================================================= */
+            /* EMPTY STATE */
+            /* ================================================= */
+
             <div className="rounded-3xl border border-white/[0.07] bg-[#07111e] py-20 text-center">
               <p className="font-mono text-sm text-slate-500">
                 No projects found in database.
@@ -587,16 +800,33 @@ const Projects = ({ projectsData = [] }) => {
           )}
         </div>
 
-        {/* Bottom Label */}
-        <div className="mt-16 flex items-center justify-center gap-3">
+        {/* ================================================= */}
+        {/* BOTTOM LABEL */}
+        {/* ================================================= */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="mt-16 flex items-center justify-center gap-3"
+        >
           <span className="h-px w-12 bg-white/[0.07]" />
 
-          <span className="font-mono text-[8px] font-bold uppercase tracking-[0.3em] text-slate-700">
+          <span className="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text font-mono text-[8px] font-bold uppercase tracking-[0.3em] text-transparent">
             Built with passion & code
           </span>
 
           <span className="h-px w-12 bg-white/[0.07]" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

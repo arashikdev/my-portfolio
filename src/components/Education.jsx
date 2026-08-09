@@ -230,7 +230,7 @@ const Education = () => {
                       <span className="h-4 w-px bg-white/10" />
 
                       <span className="text-sm font-black text-purple-400">
-                        3.89 / 4.00
+                        3.88 / 4.00
                       </span>
                     </div>
                   )}

@@ -1,74 +1,39 @@
 [
+ {
+  "id": "suncart",
+  "title": "Summer Essentials",
+  "description": "A modern e-commerce platform for shopping a wide range of summer products.",
+  "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop",
+  "tags": ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS"],
+  "link": "https://suncart-summer-essentials-store-wpf.vercel.app/",
+  "github": "https://github.com/arashik65/suncart-summer-essentials-store",
+  "role": "Full Stack Developer",
+  "year": "2026",
+  "fullDescription": "Summer Essentials is a modern e-commerce platform designed for shopping a wide range of summer products. It provides a smooth and responsive shopping experience with product browsing, detailed product pages, secure authentication, and an easy-to-use interface. Built with Next.js and modern web technologies, the platform focuses on clean design, fast performance, and a seamless user experience across desktop and mobile devices."
+},
   {
-    "id": "suncart",
-    "title": "summer-essentials",
+    "id": "pixgen",
+    "title": "pixgen",
     "description": "A comprehensive sports complex management platform for booking, member management, and resource scheduling. Designed as a modern full-stack web application.",
-    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1481487196290-c152efe083f5?q=80&w=1924&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "tags": ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    "link": "https://suncart-summer-essentials-store-wpf.vercel.app/",
-    "github": "https://github.com/arashik65/suncart-summer-essentials-store",
+    "link": "https://project-pixgen.vercel.app/",
+    "github": "https://github.com/arashik65/Project-Pixgen",
     "role": "Full Stack Developer (Lead)",
     "year": "2026",
 "fullDescription": "Summer Essentials is a modern e-commerce platform designed for shopping a wide range of summer products. It provides a smooth and responsive shopping experience with product browsing, detailed product pages, secure authentication, and an easy-to-use interface. Built with Next.js and modern web technologies, the platform focuses on clean design, fast performance, and a seamless user experience across desktop and mobile devices."
   },
   {
-    "id": "suncart",
-    "title": "summer-essentials",
+    "id": "dragon news",
+    "title": "dragon news",
     "description": "A comprehensive sports complex management platform for booking, member management, and resource scheduling. Designed as a modern full-stack web application.",
-    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1529243856184-fd5465488984?q=80&w=2092&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "tags": ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    "link": "https://suncart-summer-essentials-store-wpf.vercel.app/",
-    "github": "https://github.com/arashik65/suncart-summer-essentials-store",
+    "link": "https://dragon-news-next-better-auth-authen.vercel.app/category/01",
+    "github": "https://github.com/arashik65/dragon-news-next-better-auth-authentication-part",
     "role": "Full Stack Developer (Lead)",
     "year": "2026",
-"fullDescription": "Summer Essentials is a modern e-commerce platform designed for shopping a wide range of summer products. It provides a smooth and responsive shopping experience with product browsing, detailed product pages, secure authentication, and an easy-to-use interface. Built with Next.js and modern web technologies, the platform focuses on clean design, fast performance, and a seamless user experience across desktop and mobile devices."
-  },
-  {
-    "id": "suncart",
-    "title": "summer-essentials",
-    "description": "A comprehensive sports complex management platform for booking, member management, and resource scheduling. Designed as a modern full-stack web application.",
-    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop",
-    "tags": ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    "link": "https://suncart-summer-essentials-store-wpf.vercel.app/",
-    "github": "https://github.com/arashik65/suncart-summer-essentials-store",
-    "role": "Full Stack Developer (Lead)",
-    "year": "2026",
-"fullDescription": "Summer Essentials is a modern e-commerce platform designed for shopping a wide range of summer products. It provides a smooth and responsive shopping experience with product browsing, detailed product pages, secure authentication, and an easy-to-use interface. Built with Next.js and modern web technologies, the platform focuses on clean design, fast performance, and a seamless user experience across desktop and mobile devices."
-  },
-  {
-    "id": "suncart",
-    "title": "summer-essentials",
-    "description": "A comprehensive sports complex management platform for booking, member management, and resource scheduling. Designed as a modern full-stack web application.",
-    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop",
-    "tags": ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    "link": "https://suncart-summer-essentials-store-wpf.vercel.app/",
-    "github": "https://github.com/arashik65/suncart-summer-essentials-store",
-    "role": "Full Stack Developer (Lead)",
-    "year": "2026",
-"fullDescription": "Summer Essentials is a modern e-commerce platform designed for shopping a wide range of summer products. It provides a smooth and responsive shopping experience with product browsing, detailed product pages, secure authentication, and an easy-to-use interface. Built with Next.js and modern web technologies, the platform focuses on clean design, fast performance, and a seamless user experience across desktop and mobile devices."
-  },
-    {
-    "id": "suncart",
-    "title": "summer-essentials",
-    "description": "A comprehensive sports complex management platform for booking, member management, and resource scheduling. Designed as a modern full-stack web application.",
-    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop",
-    "tags": ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    "link": "https://suncart-summer-essentials-store-wpf.vercel.app/",
-    "github": "https://github.com/arashik65/suncart-summer-essentials-store",
-    "role": "Full Stack Developer (Lead)",
-    "year": "2026",
-"fullDescription": "Summer Essentials is a modern e-commerce platform designed for shopping a wide range of summer products. It provides a smooth and responsive shopping experience with product browsing, detailed product pages, secure authentication, and an easy-to-use interface. Built with Next.js and modern web technologies, the platform focuses on clean design, fast performance, and a seamless user experience across desktop and mobile devices."
-  },
-  {
-    "id": "sportnest",
-    "title": "SportNest",
-    "description": "A comprehensive sports complex management platform for booking, member management, and resource scheduling. Designed as a modern full-stack web application.",
-    "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop",
-    "tags": ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    "link": "https://suncart-summer-essentials-store-wpf.vercel.app/",
-    "github": "https://github.com/arashik65/suncart-summer-essentials-store",
-    "role": "Full Stack Developer (Lead)",
-    "year": "2026",
-"fullDescription": "Summer Essentials is a modern e-commerce platform designed for shopping a wide range of summer products. It provides a smooth and responsive shopping experience with product browsing, detailed product pages, secure authentication, and an easy-to-use interface. Built with Next.js and modern web technologies, the platform focuses on clean design, fast performance, and a seamless user experience across desktop and mobile devices."
+"fullDescription": "Dragon News is a modern digital newspaper platform designed to deliver news in a clean, fast, and user-friendly interface. Users can explore the latest articles across different categories, read detailed news stories, and discover trending and featured content. The platform focuses on responsive design, smooth navigation, optimized performance, and a comfortable reading experience across desktop, tablet, and mobile devices."
   }
+ 
 ]
