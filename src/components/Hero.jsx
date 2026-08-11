@@ -1,6 +1,3 @@
-
- 
-
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -12,12 +9,15 @@ const Hero = () => {
   const heroRef = useRef(null);
   const [showCvModal, setShowCvModal] = useState(false);
 
-  // CV Links
+  // ================= CV LINKS =================
+
   const cvViewLink =
     "https://drive.google.com/file/d/1ND7eRXVOv0TngezGneN9ofd0AknNP4Mm/view?usp=sharing";
 
   const cvDownloadLink =
     "https://drive.google.com/uc?export=download&id=1ND7eRXVOv0TngezGneN9ofd0AknNP4Mm";
+
+  // ================= SOCIAL LINKS =================
 
   const socialLinks = [
     {
@@ -33,6 +33,7 @@ const Hero = () => {
         </svg>
       ),
     },
+
     {
       name: "LinkedIn",
       href: "",
@@ -42,10 +43,11 @@ const Hero = () => {
           fill="currentColor"
           viewBox="0 0 24 24"
         >
-          <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.56V8.99H3.56v11.46ZM22.22 0H1.78C.8 0 0 .8 0 1.78v20.44C0 23.2.8 24 1.78 24h20.44C23.2 24 24 23.2 24 22.22V1.78C24 .8 23.2 0 22.22 0Z" />
+          <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.56V8.99H3.56v11.46ZM22.22 0H1.78C.8 0 0 .8 0 1.78v20.44C0 23.2.8 24 1.78 24h20.44C23.2 24 24 23.2 24 22.22V1.78C24 .8 24 .8 22.22 0Z" />
         </svg>
       ),
     },
+
     {
       name: "Email",
       href: "mailto:mdashikur6398@gmail.com",
@@ -62,6 +64,7 @@ const Hero = () => {
             strokeWidth="1.8"
             d="M3 6.75A1.75 1.75 0 0 1 4.75 5h14.5A1.75 1.75 0 0 1 21 6.75v10.5A1.75 1.75 0 0 1 19.25 19H4.75A1.75 1.75 0 0 1 3 17.25V6.75Z"
           />
+
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -72,6 +75,8 @@ const Hero = () => {
       ),
     },
   ];
+
+  // ================= GSAP ANIMATION =================
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -119,8 +124,8 @@ const Hero = () => {
       {/* ================= BACKGROUND ================= */}
 
       <div className="pointer-events-none absolute inset-0">
-
         {/* Grid */}
+
         <div
           className="
             absolute
@@ -132,6 +137,7 @@ const Hero = () => {
         />
 
         {/* Purple Glow */}
+
         <div
           className="
             absolute
@@ -146,6 +152,7 @@ const Hero = () => {
         />
 
         {/* Blue Glow */}
+
         <div
           className="
             absolute
@@ -160,6 +167,7 @@ const Hero = () => {
         />
 
         {/* Small Dot */}
+
         <div
           className="
             floating-dot
@@ -177,8 +185,18 @@ const Hero = () => {
 
       {/* ================= MAIN ================= */}
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 pt-28 md:px-8 md:pt-32">
-
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          max-w-7xl
+          px-5
+          pt-28
+          md:px-8
+          md:pt-32
+        "
+      >
         <div
           className="
             grid
@@ -189,14 +207,15 @@ const Hero = () => {
             lg:gap-20
           "
         >
-
           {/* =====================================================
               LEFT CONTENT
+              MOBILE = FIRST
+              DESKTOP = LEFT
           ===================================================== */}
 
-          <div className="order-2 max-w-3xl lg:order-1">
-
+          <div className="order-1 max-w-3xl lg:order-1">
             {/* Available */}
+
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -232,8 +251,8 @@ const Hero = () => {
               Available for opportunities
             </motion.div>
 
-
             {/* Role */}
+
             <div
               className="
                 hero-reveal
@@ -257,8 +276,8 @@ const Hero = () => {
               </span>
             </div>
 
-
             {/* Heading */}
+
             <h1
               className="
                 mt-6
@@ -295,8 +314,8 @@ const Hero = () => {
               </div>
             </h1>
 
-
             {/* Description */}
+
             <p
               className="
                 hero-reveal
@@ -312,19 +331,19 @@ const Hero = () => {
               <span className="font-bold text-slate-200">
                 Junior Web Developer
               </span>{" "}
-              and CSE student focused on building clean, responsive, and
-              modern web applications. I enjoy turning ideas into smooth
-              digital experiences using{" "}
+              and CSE student focused on building clean,
+              responsive, and modern web applications. I enjoy
+              turning ideas into smooth digital experiences
+              using{" "}
               <span className="font-semibold text-violet-400">
                 React, Next.js
               </span>{" "}
               and modern web technologies.
             </p>
 
-
             {/* Technologies */}
-            <div className="hero-reveal mt-7">
 
+            <div className="hero-reveal mt-7">
               <p
                 className="
                   mb-3
@@ -339,7 +358,6 @@ const Hero = () => {
               </p>
 
               <div className="flex flex-wrap gap-2">
-
                 {[
                   "React",
                   "Next.js",
@@ -372,12 +390,11 @@ const Hero = () => {
                     {tech}
                   </span>
                 ))}
-
               </div>
             </div>
 
-
             {/* Buttons */}
+
             <div
               className="
                 hero-reveal
@@ -388,8 +405,8 @@ const Hero = () => {
                 gap-3
               "
             >
-
               {/* View Work */}
+
               <motion.a
                 href="#projects"
                 whileHover={{
@@ -449,8 +466,8 @@ const Hero = () => {
                 />
               </motion.a>
 
-
               {/* CV */}
+
               <motion.button
                 type="button"
                 onClick={() => setShowCvModal(true)}
@@ -479,19 +496,16 @@ const Hero = () => {
                   hover:bg-violet-400/[0.06]
                 "
               >
-                <span>
-                  Download CV
-                </span>
+                <span>Download CV</span>
 
                 <span className="text-violet-400">
                   ↓
                 </span>
               </motion.button>
-
             </div>
 
-
             {/* Social */}
+
             <div
               className="
                 hero-reveal
@@ -501,7 +515,6 @@ const Hero = () => {
                 gap-3
               "
             >
-
               <span
                 className="
                   mr-2
@@ -556,19 +569,18 @@ const Hero = () => {
                   </a>
                 </motion.div>
               ))}
-
             </div>
-
           </div>
-
 
           {/* =====================================================
               RIGHT RECTANGLE IMAGE
+              MOBILE = SECOND
+              DESKTOP = RIGHT
           ===================================================== */}
 
           <div
             className="
-              order-1
+              order-2
               relative
               flex
               min-h-[500px]
@@ -578,8 +590,8 @@ const Hero = () => {
               lg:justify-end
             "
           >
-
             {/* Main Glow */}
+
             <div
               className="
                 hero-glow
@@ -596,6 +608,7 @@ const Hero = () => {
             />
 
             {/* Blue Glow */}
+
             <div
               className="
                 absolute
@@ -609,8 +622,8 @@ const Hero = () => {
               "
             />
 
-
             {/* IMAGE AREA */}
+
             <motion.div
               initial={{
                 opacity: 0,
@@ -634,8 +647,8 @@ const Hero = () => {
                 max-w-[430px]
               "
             >
-
               {/* Small Top Label */}
+
               <div
                 className="
                   absolute
@@ -658,8 +671,8 @@ const Hero = () => {
                 Junior Web Developer
               </div>
 
-
               {/* Rectangle Card */}
+
               <div
                 className="
                   relative
@@ -676,8 +689,8 @@ const Hero = () => {
                   shadow-[0_35px_90px_rgba(0,0,0,0.55)]
                 "
               >
-
                 {/* Inner Border */}
+
                 <div
                   className="
                     pointer-events-none
@@ -691,6 +704,7 @@ const Hero = () => {
                 />
 
                 {/* Image */}
+
                 <div
                   className="
                     absolute
@@ -702,7 +716,7 @@ const Hero = () => {
                 >
                   <Image
                     src="/images/ashik.png"
-                    alt="Jahid Hasan - Junior Web Developer"
+                    alt="Ashikur Rahman - Junior Web Developer"
                     width={566}
                     height={600}
                     priority
@@ -721,8 +735,8 @@ const Hero = () => {
                   />
                 </div>
 
-
                 {/* Bottom Gradient */}
+
                 <div
                   className="
                     pointer-events-none
@@ -739,8 +753,8 @@ const Hero = () => {
                   "
                 />
 
-
                 {/* Bottom Text */}
+
                 <div
                   className="
                     absolute
@@ -766,11 +780,10 @@ const Hero = () => {
                     ONE PROJECT AT A TIME
                   </p>
                 </div>
-
               </div>
 
-
               {/* Available Badge */}
+
               <motion.div
                 initial={{
                   opacity: 0,
@@ -802,7 +815,6 @@ const Hero = () => {
                   backdrop-blur-xl
                 "
               >
-
                 <span
                   className="
                     h-2
@@ -824,22 +836,11 @@ const Hero = () => {
                 >
                   AVAILABLE
                 </span>
-
               </motion.div>
-
             </motion.div>
-
           </div>
-
         </div>
-
-
-        {/* ================= STATS ================= */}
-
-       
-
       </div>
-
 
       {/* ================= CV MODAL ================= */}
 
@@ -861,7 +862,6 @@ const Hero = () => {
               backdrop-blur-md
             "
           >
-
             <motion.div
               initial={{
                 scale: 0.9,
@@ -894,8 +894,8 @@ const Hero = () => {
                 shadow-[0_25px_80px_rgba(0,0,0,0.6)]
               "
             >
-
               {/* Close */}
+
               <button
                 type="button"
                 onClick={() => setShowCvModal(false)}
@@ -920,10 +920,9 @@ const Hero = () => {
                 ✕
               </button>
 
-
               {/* Header */}
-              <div className="mb-6 text-center">
 
+              <div className="mb-6 text-center">
                 <h3
                   className="
                     bg-gradient-to-r
@@ -941,14 +940,13 @@ const Hero = () => {
                 <p className="mt-1 text-xs text-slate-400">
                   Choose how you want to access the file
                 </p>
-
               </div>
 
-
               {/* Actions */}
-              <div className="flex flex-col gap-3">
 
-                {/* View */}
+              <div className="flex flex-col gap-3">
+                {/* View CV */}
+
                 <a
                   href={cvViewLink}
                   target="_blank"
@@ -998,8 +996,8 @@ const Hero = () => {
                   View CV Online
                 </a>
 
+                {/* Download CV */}
 
-                {/* Download */}
                 <a
                   href={cvDownloadLink}
                   onClick={() => setShowCvModal(false)}
@@ -1041,15 +1039,11 @@ const Hero = () => {
 
                   Direct Download
                 </a>
-
               </div>
-
             </motion.div>
-
           </motion.div>
         )}
       </AnimatePresence>
-
     </section>
   );
 };
