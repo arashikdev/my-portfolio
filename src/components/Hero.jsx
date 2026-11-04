@@ -715,7 +715,7 @@ const Hero = () => {
                   "
                 >
                   <Image
-                    src="/images/ashik.png"
+                    src="/images/ArAshik.jpeg"
                     alt="Ashikur Rahman - Junior Web Developer"
                     width={566}
                     height={600}
