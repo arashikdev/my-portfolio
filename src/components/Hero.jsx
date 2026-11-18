@@ -12,10 +12,10 @@ const Hero = () => {
   // ================= CV LINKS =================
 
   const cvViewLink =
-    "https://drive.google.com/file/d/1ND7eRXVOv0TngezGneN9ofd0AknNP4Mm/view?usp=sharing";
+    "https://drive.google.com/file/d/1ND7eRXVOv0TngezGneN9ofd0AknNP4Mm/view?usp=sharin";
 
   const cvDownloadLink =
-    "https://drive.google.com/uc?export=download&id=1ND7eRXVOv0TngezGneN9ofd0AknNP4Mm";
+    "https://drive.google.com/uc?export=download&id=1ND7eRXVOv0TngezGneN9ofd0AknNP4M";
 
   // ================= SOCIAL LINKS =================
 
