@@ -22,7 +22,7 @@ const Hero = () => {
   const socialLinks = [
     {
       name: "GitHub",
-      href: "https://github.com/arashik65",
+      href: "https://github.com/arashikdev",
       icon: (
         <svg
           className="h-5 w-5"
